@@ -314,6 +314,10 @@ int QSPIFBlockDeviceAsas::deinit() {
 
 int QSPIFBlockDeviceAsas::read(void *buffer, bd_addr_t addr, bd_size_t size) {
   int status = A_QSPIF_BD_ERROR_OK;
+
+  // For Some reason the quad read doesn't work well in my device (Arduino Giga WiFi with AT25SF128A Flash)
+  // So I used conventional reading to help me in using WiFi as it depends on Firmware stored in Flash
+
   // tr_debug("Read Inst: 0x%xh", _read_instruction);
 
   // _mutex.lock();
@@ -327,6 +331,9 @@ int QSPIFBlockDeviceAsas::read(void *buffer, bd_addr_t addr, bd_size_t size) {
 
   // Serial.print("Address ");
   // Serial.println(addr);
+
+  // A trivial solution for now 
+  // Todo: Enable Dual reading because it's fast, I guess....
   size_t sz = size;
   char *bf = reinterpret_cast<char *>(buffer);
   int address = addr;

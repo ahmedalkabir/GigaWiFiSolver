@@ -328,7 +328,6 @@ int QSPIFBlockDeviceAsas::read(void *buffer, bd_addr_t addr, bd_size_t size) {
   // }
 
   // _mutex.unlock();
-
   // Serial.print("Address ");
   // Serial.println(addr);
 

@@ -32,7 +32,7 @@ I created a handy quick solution by creating a modified QSPIFBlockDevice and cal
 
 ### 1 - Use WiFiFirmwareUpdater provided with this library to install the firmware
 ![](images/3.png)
-### 2 - Include ``` #include <GigaWiFiSolver.h> ``` before ``` #include <WiFi.h> ``` look for WiFi example
+### 2 - put ``` #include <GigaWiFiSolver.h> ``` before ``` #include <WiFi.h> ``` look for WiFi example
 ![](images/4.png)
 Currently still trying to resolve the issue of the quad mode and I hope this library can help you, in case you have problem or anything you can contact me.
 [my twitter](https://twitter.com/da_lambda)

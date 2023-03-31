@@ -19,6 +19,7 @@ After a Whole week of debugging and trying to understand the issue, I found out 
 Arduino Giga uses AT25SF128A 16Mb Nor Flash and it supports Quad Mode.
 
 The QSPIFBlockDevice uses an Quad I/O Fast Read Instruction for reading data from the Flash, but if you use QSPIFBlockDevice directly you cannot read the data as the ```read``` function has issue.
+
 <span>
 **-** **the issue is related to Arduing Giga R1 that comes with AT25SF128A**.
 <span>
